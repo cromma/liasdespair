@@ -1,0 +1,16 @@
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+#include "dialogue.dm"
+#include "interface.dm"
+#include "mobs.dm"
+#include "movement.dm"
+#include "world.dm"
+#include "Interface.dmf"
+#include "MAP.dmm"
+// END_INCLUDE

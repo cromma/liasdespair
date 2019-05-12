@@ -1,0 +1,249 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "Northeast+REP"
+	elem 
+		name = "Southeast+REP"
+	elem 
+		name = "Southwest+REP"
+	elem 
+		name = "Northwest+REP"
+	elem 
+		name = "West+UP"
+		command = "stopfootstep"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "North+UP"
+		command = "stopfootstep"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "East+UP"
+		command = "stopfootstep"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "South+UP"
+		command = "stopfootstep"
+	elem 
+		name = "South+REP"
+		command = ".south"
+	elem 
+		name = "X"
+		command = "jumpdialogue"
+
+
+menu "menu"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+
+
+window "gameover"
+	elem "gameover"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "label8"
+		type = LABEL
+		pos = 160,254
+		size = 312x20
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = "- O DESESPERO DE LIA -"
+	elem "label7"
+		type = LABEL
+		pos = 164,432
+		size = 312x20
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = "Pressione 'X' para tentar novamente!"
+	elem "label1"
+		type = LABEL
+		pos = 149,177
+		size = 352x80
+		anchor1 = none
+		anchor2 = none
+		font-family = "Coder's Crux"
+		font-size = 65
+		text-color = #ea2222
+		background-color = #000000
+		saved-params = ""
+		text = "GAME OVER"
+		text-wrap = true
+
+window "intros"
+	elem "intros"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+		macro = "macro"
+		menu = "menu"
+	elem "label4"
+		type = LABEL
+		pos = 240,408
+		size = 136x36
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		is-visible = false
+		saved-params = ""
+		text = "Pressione 'X' para continuar!"
+		text-wrap = true
+	elem "label2"
+		type = LABEL
+		pos = 112,64
+		size = 88x16
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = "Narrador:"
+		text-wrap = true
+	elem "label1"
+		type = LABEL
+		pos = 128,80
+		size = 352x312
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = ""
+		text-wrap = true
+
+window "main"
+	elem "main"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "O Desespero de Lia"
+		statusbar = false
+		can-resize = false
+		icon = 'icon.dmi'
+		macro = "macro"
+		menu = "menu"
+	elem "child1"
+		type = CHILD
+		pos = 0,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "splitter"
+		left = "intros"
+		is-vert = false
+		splitter = 100
+
+window "map"
+	elem "map"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #c0c0c0
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+		macro = "macro"
+		menu = "menu"
+	elem "map1"
+		type = MAP
+		pos = 0,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		saved-params = "zoom;letterbox;zoom-mode"
+		icon-size = 38
+		zoom = 1
+	elem "label6"
+		type = LABEL
+		pos = 0,384
+		size = 88x16
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		is-visible = false
+		saved-params = ""
+		text = "Narrador:"
+	elem "label5"
+		type = LABEL
+		pos = 0,400
+		size = 640x80
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = ""
+		text-wrap = true
+	elem "label3"
+		type = LABEL
+		pos = 128,400
+		size = 386x80
+		anchor1 = none
+		anchor2 = none
+		font-family = "Small Fonts"
+		text-color = #ffffff
+		background-color = #000000
+		is-visible = false
+		saved-params = ""
+		text = "gdsfgdfsgsdfgsdfgsdfgsdfgsdfgsdfgsdf"
+		text-wrap = true
+
